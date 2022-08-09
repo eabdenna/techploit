@@ -18817,13 +18817,14 @@ html {
 }
 
 .main-banner {
-  padding: 4.2rem 0 2rem 0;
+  padding: 4.2rem 0 5rem 0;
   color: #ffffff;
   background-size: cover;
 }
 
 @media (max-width: 991px) {
   .main-banner {
+    padding-top: 109px;
     padding: 1rem;
     margin-bottom: 50px;
   }
