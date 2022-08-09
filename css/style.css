@@ -30,6 +30,193 @@
 /* === Import template variables === */
 /*-------------------------------------------------------------------*/
 /* === SCSS Compass Functions === */
+.services {
+	padding-top: 40px;
+	padding-bottom: 40px;
+    background-color: #f9fafb;
+}
+
+.card-services {
+	transition: box-shadow 0.7s;
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color:  #fff;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.08);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.servi-icons {
+    width: 130px;
+    height: 130px;
+    margin:  auto;
+    display:  flex;
+    border-radius: 100%;
+    transition: box-shadow 0.4s;
+}
+
+.card-services:hover {
+	box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.15);
+}
+
+
+.card-services:hover .servi-icons, .card-services:focus .servi-icons {
+	box-shadow: 0px 0px 0px 3px rgba(255, 59, 59, 0.68);
+}
+
+.enter-sicon {
+    width:  95%;
+    height:  95%;
+    margin:  auto;
+    text-align:  center;
+    border-radius: 100%;
+    background-color: #ff3b3b;
+    color: #fff;
+    display: flex;
+}
+.enter-sicon svg {
+	margin: auto;
+    font-size: 35px;
+    opacity: 0.7;
+    transition: opacity 0.4s;
+}
+.card-services:hover .enter-sicon svg, .card-services:focus .enter-sicon svg {
+	opacity: 1;
+}
+h3.serv-name {
+    font-size:  17px;
+    font-family:  'Roboto', sans-serif;
+    color: #555;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom:  10px;
+}
+
+hr.serv-hr {
+    margin:  0 auto;
+    width:  50px;
+    opacity: 0.5;
+    border: 1px solid #ff3b3b;
+}
+
+p.ssubinfo {
+    margin-top:  10px;
+    color: #8e8e8e;
+    font-family:  'Roboto', sans-serif;
+    font-size:  14px;
+    margin-bottom: 30px;
+}
+
+a.more-servinfo, a.more-servinfo:visited {
+    font-family:  'Roboto', sans-serif;
+    color: #777;
+    text-decoration:  none;
+    font-weight: 500;
+    font-size:  15px;
+    text-transform:  capitalize;
+    opacity: 0.6;
+    transition: opacity 0.4s;
+}
+
+a.more-servinfo:hover, a.more-servinfo:focus {
+    color: #333;
+}
+.card-services:hover a.more-servinfo, .card-services:focus a.more-servinfo {
+	opacity: 1;
+}
+.card-services:hover a.more-servinfo::after, .card-services:focus a.more-servinfo::after {
+	width: 35%;
+}
+a.more-servinfo::after {
+    content:  '';
+    display:  none;
+    margin:  auto;
+    width: 0%;
+    transition: width 0.4s;
+    border-top: 1px solid;
+    margin-top:  3px;
+}
+
+/*Card verde*/
+	.card-services:hover .servi-icons.s-green, .card-services:focus .servi-icons.s-green {
+		box-shadow: 0px 0px 0px 3px rgba(76, 175, 80, 0.46);
+	}
+	.enter-sicon.s-green {
+		background-color: #4CAF50;
+	}
+	.serv-hr.s-green {
+		border-color: #4CAF50;
+	}
+/*Card verde*/
+/*Card laranja*/
+	.card-services:hover .servi-icons.s-orange, .card-services:focus .servi-icons.s-orange {
+		box-shadow: 0px 0px 0px 3px rgba(255, 152, 0, 0.42);
+	}
+	.enter-sicon.s-orange {
+		background-color: #FFC107;
+	}
+	.serv-hr.s-orange {
+		border-color: #FFC107;
+	}
+/*Card laranja*/
+/*Card azul*/
+	.card-services:hover .servi-icons.s-blue, .card-services:focus .servi-icons.s-blue {
+		box-shadow: 0px 0px 0px 3px rgba(0, 133, 211, 0.59);
+	}
+	.enter-sicon.s-blue {
+		background-color: #0085d3;
+	}
+	.serv-hr.s-blue {
+		border-color: #0085d3;
+	}
+/*Card azul*/
+
+.col-sm-12.session-title {
+    text-align:  center;
+    padding-bottom: 30px;
+}
+
+h1.session-tit {
+    margin:  0;
+    font-size:  26px;
+    font-weight:  900;
+    color: #313437;
+    font-family:  'Roboto', sans-serif;
+    opacity:  0.8;
+}
+
+hr.ss-hr {
+    width:  80px;
+    border:  1px solid;
+    margin:  0 auto;
+    margin-top:  10px;
+    margin-bottom:  10px;
+    opacity:  0.1;
+}
+
+p.ss-pp {
+    font-family:  'Open sans', sans-serif;
+    font-weight: 500;
+    color: #969696;
+    font-size:  14px;
+    width:  400px;
+    margin:  auto;
+    max-width:  100%;
+}
+@media screen and (max-width: 600px) {
+  .card-column {
+    width: 90%;
+  }
+  
+  .column-1 {
+    padding-top: 0px;
+  }
+  
+  .open-content img {
+    margin-top: 40px;
+  }
+}
 @-moz-keyframes flash {
   0% {
     opacity: 1;
@@ -18630,7 +18817,7 @@ html {
 }
 
 .main-banner {
-  padding: 4.2rem 0 14rem 0;
+  padding: 4.2rem 0 1rem 0;
   color: #ffffff;
   background-size: cover;
 }
@@ -19349,5 +19536,502 @@ a, a:hover {
 
   .yellow:nth-child(2n)::before {
     background-image: linear-gradient(80deg, rgba(189, 187, 73, 0.1), transparent 50%);
+  }
+}
+#gallery {
+  margin: 0 auto;
+  padding: 1vw;
+  font-size: 1.6rem;
+}
+#gallery h1 {
+  font-weight: normal;
+}
+#gallery b {
+  font-weight: bold;
+}
+#gallery #header {
+  position: relative;
+  height: 12vh;
+  line-height: 12vh;
+  padding: 0 3vw;
+}
+#gallery #header #logo {
+  font-size: 2.5vh;
+  font-style: italic;
+}
+#gallery #header #logo:before {
+  content: 'THE';
+  margin-right: 0.5rem;
+  font-weight: 300;
+}
+#gallery #header #logo:after {
+  content: 'GALLERY';
+  font-size: 5vh;
+  font-weight: 900;
+}
+#gallery #images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+#gallery #images .figure {
+  position: relative;
+  width: 30vw;
+  height: 38rem;
+  margin: 0.5vh;
+  background-size: cover;
+  overflow: hidden;
+  cursor: pointer;
+  background: #20f;
+}
+#gallery #images .figure .image {
+  position: relative;
+  display: block;
+  object-fit: cover;
+  min-height: 100%;
+  max-width: 100%;
+  opacity: 1;
+  transition: all 0.5s ease;
+  user-select: none;
+}
+#gallery #images .figure .caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#gallery #images .figure .body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4vw 4vw;
+}
+#gallery #images .figure .text {
+  position: relative;
+  font-size: 1.6rem;
+  opacity: 0;
+  transform: translateY(5vh);
+  transition: all 0.4s ease-in-out;
+  transition-delay: 0.1s;
+}
+#gallery #images .figure hr {
+  width: 50%;
+  border: 0;
+  border-bottom: 4px solid rgba(255,255,255,0.2);
+}
+#gallery #images .figure:hover .image {
+  opacity: 0.6;
+  transform: scale3d(1.2, 1.2, 1.2);
+}
+#gallery #images .figure:hover .text {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media only screen and (max-width: 48rem) {
+  #gallery {
+    padding: 0;
+  }
+  #gallery #images .figure {
+    width: 46vw;
+  }
+}
+@media only screen and (max-width: 32rem) {
+  #gallery {
+    padding: 0;
+  }
+  #gallery #images {
+    flex-direction: column;
+  }
+  #gallery #images .figure {
+    width: 100%;
+    margin: 0.5vh 0;
+  }
+}
+/* 
+** Layout, Text & Colors 
+*/
+
+
+
+
+
+
+
+/* Cards */
+.card-column {
+  width: 50%;
+  float: left;
+  padding: 4%;
+  box-sizing: border-box;
+}
+
+.column-1 {
+  padding-top: 100px;
+}
+
+
+.card h1 {
+  position: relative;
+  padding: 190px 0px 100px 10px;
+  width: 90%;
+}
+
+.card > img {
+  width: 90%;
+  position: absolute;
+  top: -6%;
+  left: -6%;
+}
+
+/* The cover (expanding background) */
+.cover {
+  position: fixed;
+  background: #EB5160;
+  z-index: 100;
+  transform-origin: 50% 50%;
+}
+
+/* The open page content */
+.open-content {
+  width: 100%;
+  z-index: 110;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.open-content img {
+  position: relative;
+  width: 90%;
+  margin-left: 3%;
+  margin-top: 20px;
+  z-index: 5;
+}
+
+.open-content .text {
+  background: #fff;
+  margin-top: -56%;
+  padding: 60% 5% 5% 5%;
+  width: 80%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
+
+.open-content .text h1, .open-content .text p {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.close-content {
+  display: block;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 30px;
+  height: 30px;
+}
+
+.close-content span {
+  background: #222;
+  width: 30px;
+  height: 6px;
+  display: block;
+  position: absolute;
+  top: 14px;
+}
+
+.x-1 {
+  transform: rotate(45deg);
+}
+
+.x-2 {
+  transform: rotate(-45deg);
+}
+
+/* 
+** Transitions
+*/
+
+.card {
+  transition: opacity 200ms linear 320ms, transform 200ms ease-out 320ms;
+}
+
+.border {
+  transition: opacity 200ms linear, transform 200ms ease-out;
+}
+
+.card img {
+  transition: opacity 200ms linear 0ms, transform 200ms ease-in 0ms;
+}
+
+.card h1 {
+  transform: translate3d(20%, 0px, 0px);  
+  transition: opacity 200ms linear 120ms, transform 200ms ease-in 120ms;
+}
+
+/* Clicked card */
+.card.clicked img {
+  transform: translate3d(0px, -40px, 0px);
+  opacity: 0;
+}
+
+.card.clicked .border {
+  opacity: 0;
+  transform: scale(1.3);
+}
+
+.card.out, .card.out img {
+  transform: translate3d(0px, -40px, 0px);
+  opacity: 0;
+}
+
+.card.out h1, .card.clicked h1 {
+  transform: translate3d(20%, -40px, 0px);
+  opacity: 0;
+}
+
+.cover {
+  transition: transform 300ms ease-in-out;
+}
+
+.open-content {
+  transition: opacity 200ms linear 0ms;
+}
+
+.open-content.open {
+  opacity: 1;
+  pointer-events: all;
+  transition-delay: 1000ms;
+}
+
+/* 
+** Media Queries
+*/
+
+@media screen and (max-width: 600px) {
+  .card-column {
+    width: 90%;
+  }
+  
+  .column-1 {
+    padding-top: 0px;
+  }
+  
+  .open-content img {
+    margin-top: 40px;
+  }
+}
+
+
+
+
+
+
+/* Cards */
+.card-column {
+  width: 50%;
+  float: left;
+  padding: 4%;
+  box-sizing: border-box;
+}
+
+.column-1 {
+  padding-top: 100px;
+}
+
+.card {
+  width: 92%;
+  max-width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  background: #EB5160;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 60px;
+}
+
+.border {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  border: 1px solid #fff;
+  opacity: 0.5;
+  left: -6px;
+  top: -6px;
+}
+
+.card h1 {
+  position: relative;
+  padding: 190px 0px 100px 10px;
+  width: 90%;
+}
+
+.card > img {
+  width: 90%;
+  position: absolute;
+  top: -6%;
+  left: -6%;
+}
+
+.card-color-0 {
+  background-color: #EB5160;
+}
+
+.card-color-1 {
+  background-color: #8F3985;
+}
+
+.card-color-2 {
+  background-color: #8DAA91;
+}
+
+.card-color-3 {
+  background-color: #888DA7;
+}
+
+/* The cover (expanding background) */
+.cover {
+  position: fixed;
+  background: #EB5160;
+  z-index: 100;
+  transform-origin: 50% 50%;
+}
+
+/* The open page content */
+.open-content {
+  width: 100%;
+  z-index: 110;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.open-content img {
+  position: relative;
+  width: 90%;
+  margin-left: 3%;
+  margin-top: 20px;
+  z-index: 5;
+}
+
+.open-content .text {
+  background: #fff;
+  margin-top: -56%;
+  padding: 60% 5% 5% 5%;
+  width: 80%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
+
+.open-content .text h1, .open-content .text p {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.close-content {
+  display: block;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 30px;
+  height: 30px;
+}
+
+.close-content span {
+  background: #222;
+  width: 30px;
+  height: 6px;
+  display: block;
+  position: absolute;
+  top: 14px;
+}
+
+.x-1 {
+  transform: rotate(45deg);
+}
+
+.x-2 {
+  transform: rotate(-45deg);
+}
+
+/* 
+** Transitions
+*/
+
+.card {
+  transition: opacity 200ms linear 320ms, transform 200ms ease-out 320ms;
+}
+
+.border {
+  transition: opacity 200ms linear, transform 200ms ease-out;
+}
+
+.card img {
+  transition: opacity 200ms linear 0ms, transform 200ms ease-in 0ms;
+}
+
+.card h1 {
+  transform: translate3d(20%, 0px, 0px);  
+  transition: opacity 200ms linear 120ms, transform 200ms ease-in 120ms;
+}
+
+/* Clicked card */
+.card.clicked img {
+  transform: translate3d(0px, -40px, 0px);
+  opacity: 0;
+}
+
+.card.clicked .border {
+  opacity: 0;
+  transform: scale(1.3);
+}
+
+.card.out, .card.out img {
+  transform: translate3d(0px, -40px, 0px);
+  opacity: 0;
+}
+
+.card.out h1, .card.clicked h1 {
+  transform: translate3d(20%, -40px, 0px);
+  opacity: 0;
+}
+
+.cover {
+  transition: transform 300ms ease-in-out;
+}
+
+.open-content {
+  transition: opacity 200ms linear 0ms;
+}
+
+.open-content.open {
+  opacity: 1;
+  pointer-events: all;
+  transition-delay: 1000ms;
+}
+
+/* 
+** Media Queries
+*/
+
+@media screen and (max-width: 600px) {
+  .card-column {
+    width: 90%;
+  }
+  
+  .column-1 {
+    padding-top: 0px;
+  }
+  
+  .open-content img {
+    margin-top: 40px;
   }
 }
